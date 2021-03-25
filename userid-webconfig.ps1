@@ -1,5 +1,5 @@
 ﻿Copy-Item "web.config" -Destination "C:\temp\web.config"
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -pdf connectionStrings 'C:\Temp'
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -pdf connectionStrings 'C:\temp\web.config'
 $myText = Get-Content C:\Temp\web.config
 $userid = $myText -split ";" | Select-String -Pattern 'UserID'
 $justtheid = $userid -replace '=',' ' 
